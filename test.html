@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        var onImgArray = new Array();
+        onImgArray["play"] = new Image(75,33)
+        function imageOn(imgName) {
+            if (document.images){
+                document.images[imgName].src = onImgArray[imgName].src
+            }
+        }
+        function setMsg(msg){
+            window.status = msg;
+            return true
+        }
+        function playIt(){
+
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <a href="javascript:playIt()"
+        onmouseover="imageOn('play'); return setMsg('Play the selected tune')" >
+        <img src="images/image1.jpg" name="play" height="33" width="75" border="0">
+    </a>
+    </form>
+    
+</a>
+</body>
+</html>
