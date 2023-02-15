@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function jumpNext(fromFld, toFld){
+                if (fromFld.value.length == 2){
+                    document.forms[0].elements[toFld].focus()
+                    document.forms[0].elements[toFld].select()
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            month: <input name="month" type="text" size="3" value="" onKeyUp="jumpNext(this,day)" maxLength="2">
+            Day: <input name="day" type="text" size="3" value="" onKeyUp="jumpNext(this, year)" maxLength="2">
+            year: <input name="year" type="text" size="3" value="" onKeyUp="jumpNext(this,month)" maxLength="2">
+        </form>
+    </body>
+</html>
