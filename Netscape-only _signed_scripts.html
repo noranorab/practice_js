@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        function newRaisedWindow(){
+            netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite")
+            var newWindow = window.open("", "", "height = 100, width=300, alwaysRaised")
+            netscape.security.PrivilegeManager.disablePrivilege("UniversalBrowserWrite")
+            var newContent = "<html><body><b> " + "on top of spaghetti!" + "</b>"
+                newContent += "<form><center><input type='button' value='ok'"
+                newContent += "onClick ='self.close()'></center></form></nody></html>"
+                newWindow.document.write(newContent)
+                newWindow.document.close()
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
