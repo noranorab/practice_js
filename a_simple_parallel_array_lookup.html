@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        var regionalOffices = new Array("New York", "Chicago", "Houston", "Portland");
+        var regionalManagers = new Array("Shirley Smith", "Todd gaston", "Leslie Jones", "Harold Zoot")
+        var regOfficeQuotas = new Array(300000, 250000, 350000, 225000)
+        var a = ["chien"]
+            a[100] = "bien"
+            console.log (a.length)
+        function getData(form){
+            var i = form.offices.selectedIndex
+            form.manager.value= regionalManagers[i]
+            form.quota.value = regOfficeQuotas[i]
+            
+        }
+    </script>
+
+</head>
+<body onLoad="getData(document.officeData)">
+    <h1>Parallel Array Lookup</h1>
+    <hr>
+    <form name = "officeData">
+        <p>
+            select a regional office:
+            <select name="offices" onChange="getData(this.form)">
+                <option>New York</option>
+                <option>Chicago</option>
+                <option>Houston</option>
+                <option>Portland</option>
+            </select>
+        </p>
+        <p>
+            The manager is:
+            <input type="text" name="manager" size="35">
+            <br>
+            The office quota is:
+            <input type="text" name="quota" size="8">
+        </p>
+    </form>
+    
+</body>
+</html>
